@@ -19,6 +19,7 @@ CREATE TABLE book_autor (
   book_id int(11) NOT NULL,
   autor_id int(11) NOT NULL,
   PRIMARY KEY (id),
+  UNIQUE KEY `uix_book_autor` (`book_id`,`autor_id`),
   CONSTRAINT FK_boot_autor_autor_autor_id FOREIGN KEY (autor_id)
   REFERENCES autor (autor_id) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT FK_boot_autor_book_book_id FOREIGN KEY (book_id)
